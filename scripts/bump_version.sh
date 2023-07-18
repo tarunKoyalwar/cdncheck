@@ -28,7 +28,7 @@ fi
 current_version=$(git tag --sort=-v:refname | head -n 1 | awk -F. '{OFS="."; $NF+=1; print $0}') #get from git tags
 
 
-# Split the version into parts
+# Split the version into parts 
 IFS='.' read -a version_parts <<< "$current_version"
 
 # Bump the specified part of the version
